@@ -1,0 +1,21 @@
+<h3>Change color Animation</h3>
+<button class="my_button" (click)="changeState()">Click here</button>
+<hr />
+<button [@changeBtnColor]="current" class="mybutton" (click)="changeState()">
+  Change Color
+</button>
+<br />
+<br />
+<br />
+<br />
+
+<h3>Enter and Leave animation</h3>
+<a (click)="addElement()" href="#" class="myButton">Add List</a>
+<a (click)="removeElement()" href="#" class="myButton">Remove List</a>
+<div style="width: 200px; margin-left: 20px">
+  <ul>
+    <li *ngFor="let list of mylist" [@AnimateList]>
+      {{ list }}
+    </li>
+  </ul>
+</div>
